@@ -2,6 +2,19 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
+// Display the current date in the header of the page.
+
+// const currentDate = dayjs();
+// console.log(currentDate.format("dddd, MMMM D, YYYY"));
+// var currentDay = document.getElementById('currentDay');
+// currentDay.textContent = currentDate.format("dddd, MMMM D, YYYY");
+
+// Below I try the jQuery method
+
+var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
+console.log(currentDate)
+$('#currentDay').html(currentDate);
+
 // $(function () {
 //   // TODO: Add a listener for click events on the save button. This code should
 //   // use the id in the containing time-block as a key to save the user input in
@@ -12,7 +25,7 @@
 //   //
         //Make a click listener to the saveBtn and get the values stored: 
         $('.saveBtn').on('click',function(){
-          var hour = $(this).parent().attr('id');
+          var hour = $(this).parent().attribute('id');
           var tasks = $(this).siblings(".description").val();
           console.log(hour, tasks)
         // Adding the descriptions in the localStorage:
@@ -23,9 +36,20 @@
           var currentHour = dayjs().hour();
           
           $('.time-block').each(function(){
-            var timeblock =parseInt($(this).attr('id').split('hour')[1]);
+            var timeBlock =parseInt($(this).attribute('id').split('hour-')[1]);
+
+            if(timeBlock === currentHour) {
+              $(this).setAttribute('present');
+           } else if (timeBlock>currentHour){
+              $(this).setAttribute('future');
+       
+              
+           } else{
+              $(this).setAttribute('past');
+
+           }
           })
-        }
+      }
 //   // TODO: Add code to apply the past, present, or future class to each time
 //   // block by comparing the id to the current hour. HINTS: How can the id
 //   // attribute of each time-block be used to conditionally add or remove the
@@ -50,14 +74,3 @@
     hourTracker();
 // });
 
-// Display the current date in the header of the page.
-
-// const currentDate = dayjs();
-// console.log(currentDate.format("dddd, MMMM D, YYYY"));
-// var currentDay = document.getElementById('currentDay');
-// currentDay.textContent = currentDate.format("dddd, MMMM D, YYYY");
-
-// Below I try the jQuery method
-var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
-console.log(currentDate)
-$('#currentDay').html(currentDate);
