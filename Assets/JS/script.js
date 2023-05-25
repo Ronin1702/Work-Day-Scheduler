@@ -25,9 +25,10 @@
 //   // the values of the corresponding textarea elements. HINT: How can the id
 //   // attribute of each time-block be used to do this?
 //   //
-//   // TODO: Add code to display the current date in the header of the page.
-  
 // });
 
-const dayJsObject = dayjs();
-console.log(dayJsObject.format("dddd, MMMM D, YYYY"))
+//   // TODO: Add code to display the current date in the header of the page.
+const currentDate = dayjs();
+console.log(currentDate.format("dddd, MMMM D, YYYY"));
+var currentDay = document.getElementById('currentDay');
+currentDay.textContent = currentDate.format("dddd, MMMM D, YYYY");
