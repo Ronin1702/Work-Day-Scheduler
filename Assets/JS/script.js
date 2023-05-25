@@ -13,7 +13,7 @@
         $('.saveBtn').on('click',function(){
           var hour = $(this).parent().attr('id');
           var task = $(this).siblings(".description").val();
-console.log(hour, task)
+          console.log(hour, task)
         })
 //   // TODO: Add code to apply the past, present, or future class to each time
 //   // block by comparing the id to the current hour. HINTS: How can the id
