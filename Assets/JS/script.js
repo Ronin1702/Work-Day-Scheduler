@@ -10,11 +10,22 @@
 //   // time-block containing the button that was clicked? How might the id be
 //   // useful when saving the description in local storage?
 //   //
+        //Make a click listener to the saveBtn and get the values stored: 
         $('.saveBtn').on('click',function(){
           var hour = $(this).parent().attr('id');
-          var task = $(this).siblings(".description").val();
-          console.log(hour, task)
+          var tasks = $(this).siblings(".description").val();
+          console.log(hour, tasks)
+        // Adding the descriptions in the localStorage:
+          localStorage.setItem(hour, tasks)
         })
+
+        function hourTracker(){
+          var currentHour = dayjs().hour();
+          
+          $('.time-block').each(function(){
+            var timeblock =parseInt($(this).attr('id').split('hour')[1]);
+          })
+        }
 //   // TODO: Add code to apply the past, present, or future class to each time
 //   // block by comparing the id to the current hour. HINTS: How can the id
 //   // attribute of each time-block be used to conditionally add or remove the
@@ -24,7 +35,19 @@
 //   // TODO: Add code to get any user input that was saved in localStorage and set
 //   // the values of the corresponding textarea elements. HINT: How can the id
 //   // attribute of each time-block be used to do this?
-//   //
+
+//   // Retrieve items from the localStorage
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+    $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+
+    hourTracker();
 // });
 
 // Display the current date in the header of the page.
