@@ -1,11 +1,6 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-// if(document.readyState=='loading'){
-//   document.addEventListener('DOMContentLoaded',ready)
-// } else {
-//   ready()
-// }
 
 // $(function () {
 //   // TODO: Add a listener for click events on the save button. This code should
@@ -27,12 +22,14 @@
 //   //
 // });
 
-//   // TODO: Add code to display the current date in the header of the page.
-const currentDate = dayjs();
-console.log(currentDate.format("dddd, MMMM D, YYYY"));
-var currentDay = document.getElementById('currentDay');
-currentDay.textContent = currentDate.format("dddd, MMMM D, YYYY");
+// Display the current date in the header of the page.
 
-var saveTask = document.getElementsByClassName('saveBtn');
-saveTask.addEventListener('click');
-console.log(saveTask)
+// const currentDate = dayjs();
+// console.log(currentDate.format("dddd, MMMM D, YYYY"));
+// var currentDay = document.getElementById('currentDay');
+// currentDay.textContent = currentDate.format("dddd, MMMM D, YYYY");
+
+// Below I try the jQuery method
+var currentDate = dayjs().format('dddd, MMMM DD, YYYY');
+console.log(currentDate)
+$('#currentDay').html(currentDate);
