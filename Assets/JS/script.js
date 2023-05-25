@@ -29,6 +29,5 @@
   
 // });
 
-var currentDate =document.getElementById('currentDay');
-  currentDate.appendChild.innerHTML('daysjs().format()');
-  console.log(currentDate)
+const dayJsObject = dayjs();
+console.log(dayJsObject.format("dddd, MMMM D, YYYY"))
