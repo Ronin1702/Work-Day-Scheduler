@@ -32,3 +32,7 @@ const currentDate = dayjs();
 console.log(currentDate.format("dddd, MMMM D, YYYY"));
 var currentDay = document.getElementById('currentDay');
 currentDay.textContent = currentDate.format("dddd, MMMM D, YYYY");
+
+var saveTask = document.getElementsByClassName('saveBtn');
+saveTask.addEventListener('click');
+console.log(saveTask)
