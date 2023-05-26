@@ -15,7 +15,7 @@ $('#currentDay').text(currentDate);
 // in the html.
 $(document).ready(function () {
   //Make a click listener to the saveBtn and get the values stored: 
-  $('.saveBtn').on('click', function () {});
+  $('.saveBtn').on('click', function () {;
     // define and allocate the hour of the related time-block.
     // this here refers to the same line where .saveBtn class is located.
     var hour = $(this).parent().attr('id');
@@ -25,7 +25,7 @@ $(document).ready(function () {
     console.log(hour, tasks);
     // Storing the descriptions and related time-block in the localStorage:
     localStorage.setItem(hour, tasks);
-  });
+  })
 
   function hourTracker() {
 
@@ -68,3 +68,4 @@ $(document).ready(function () {
     $("#hour-16 .description").val(localStorage.getItem("hour-16"));
     $("#hour-17 .description").val(localStorage.getItem("hour-17"));
     
+})
