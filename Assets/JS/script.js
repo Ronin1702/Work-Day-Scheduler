@@ -20,7 +20,7 @@ $(document).ready(function () {
     // this here refers to the same line where .saveBtn class is located.
     var hour = $(this).parent().attr('id');
     // definte inputs in the description box as tasks.
-    var tasks = $(this).siblings(".description").val();
+    var tasks = $(this).siblings('.description').val();
     // console log to check if my variables are set up correctly
     console.log(hour, tasks);
     // Storing the descriptions and related time-block in the localStorage:
