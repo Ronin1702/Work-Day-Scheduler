@@ -9,7 +9,7 @@ This site is created for the 3rd-party APIs challenge.
 <li>Once the page is refreshed, the site will pull items from localStorage saved from previous entries and print in the related time block box. </li>
 
 ## Screenshot 
-![screenshot](./Assets/Images/ScreenShot-Work-Day-Scheduler.png)
+![screenshot](./Assets/Images/Work-Day-Scheduler-Screenshot.png)
 
 ## Deployed Link and Repo Link
 Deployed Weblink: https://ronin1702.github.io/Work-Day-Scheduler/<br>
