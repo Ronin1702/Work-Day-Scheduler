@@ -37,16 +37,17 @@ $(document).ready(function () {
       $('#hour-16 .description').val(localStorage.getItem('hour-16'));
       $('#hour-17 .description').val(localStorage.getItem('hour-17'));
 
-      // Below I create a listener for the trashBtn and make it retrieve and remove related vals in the localStorage
+// Below I create a listener for the trashBtn and make it retrieve and remove related vals in the localStorage
   $('.trashBtn').on('click', function () {
     localStorage.removeItem($(this).parent().attr('id'));
     $(this).siblings('.description').val('');
   })
-  
+// Below I created a listener for clearBtn and make it clear out all values and keys in the localStorage
   $('.clearBtn').on('click', function () {
     localStorage.clear();
     $('.description').val('');
   })
+
   function hourTracker() {
 
     var currentHour = dayjs().hour();
