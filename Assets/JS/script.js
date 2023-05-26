@@ -54,10 +54,14 @@ $(document).ready(function () {
     var currentHour = dayjs().hour();
 
     $('.time-block').each(function () {
+      // define timeBlock by getting the string value to an numberic value.
+      // Allocate the timeBlock value by finding its id and get rid of non-number values within.
       var timeBlock = parseInt($(this).attr('id').split('hour-')[1]);
+      
       // console log to chedck if the varibles are set up alright
       console.log(timeBlock);
       console.log(currentHour);
+      
       // compare the value of timeBlock and the current hour and set the class to 'past' 'presnet' 'future' accordingly
       if (timeBlock === currentHour) {
 
@@ -73,6 +77,7 @@ $(document).ready(function () {
       }
     })
   }
+  
   // kick on the hourTracker and set an interval to let it run every 15000ms
   hourTracker();
   setInterval(hourTracker, 15000);
