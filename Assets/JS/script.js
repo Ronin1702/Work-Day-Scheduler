@@ -73,7 +73,7 @@ $(document).ready(function () {
       }
     })
   }
-  // kick on the hourTracker
+  // kick on the hourTracker and set and interval to let it run every 15000ms
   hourTracker();
   setInterval(hourTracker, 15000);
 })
