@@ -58,7 +58,7 @@ $(document).ready(function () {
       // console log to chedck if the varibles are set up alright
       console.log(timeBlock);
       console.log(currentHour);
-
+      // compare the value of timeBlock and the current hour and set the class to 'past' 'presnet' 'future' accordingly
       if (timeBlock === currentHour) {
 
         $(this).addClass('present');
@@ -73,7 +73,7 @@ $(document).ready(function () {
       }
     })
   }
-  // kick on the hourTracker and set and interval to let it run every 15000ms
+  // kick on the hourTracker and set an interval to let it run every 15000ms
   hourTracker();
   setInterval(hourTracker, 15000);
 })
