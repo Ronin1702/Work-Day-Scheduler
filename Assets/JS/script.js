@@ -42,7 +42,11 @@ $(document).ready(function () {
     localStorage.removeItem($(this).parent().attr('id'));
     $(this).siblings('.description').val('');
   })
-
+  
+  $('.clearBtn').on('click', function () {
+    localStorage.clear();
+    $('.description').val('');
+  })
   function hourTracker() {
 
     var currentHour = dayjs().hour();
