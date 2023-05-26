@@ -53,6 +53,9 @@ $(document).ready(function () {
       }
     })
   }
+  // kick on the hourTracker
+  hourTracker();
+  setInterval(hourTracker, 15000);
 
   //   // Retrieve items from the localStorage by using ids from each time-block div
     $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -64,6 +67,4 @@ $(document).ready(function () {
     $("#hour-15 .description").val(localStorage.getItem("hour-15"));
     $("#hour-16 .description").val(localStorage.getItem("hour-16"));
     $("#hour-17 .description").val(localStorage.getItem("hour-17"));
-    // kick on the hourTracker
-    hourTracker();
-
+    
