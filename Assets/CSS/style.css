@@ -58,6 +58,7 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+/* here I style the class of trashBtn */
 .trashBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -71,6 +72,7 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+/* here I style the class of clearBtn */
 .clearBtn {
   border-left: 1px solid black;
   border-radius: 15px;
@@ -82,4 +84,12 @@ textarea {
 .trashBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+h1{
+  font-family: 'Alfa Slab One', cursive;
+}
+
+p{
+  font-family: 'Russo One', sans-serif;
 }
