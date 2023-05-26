@@ -8,9 +8,9 @@ This site is created for the 3rd-party APIs challenge.
 <li>User can input any texts in the time block, once the save button is clicked, the inputs are stored in the localStorage and then printed in the same time block box. </li>
 <li>Once the page is refreshed, the site will pull items from localStorage saved from previous entries and print in the related time block box. </li>
 
-## Screenshot 
-![screenshot](./Assets/Images/Work-Day-Scheduler-Screenshot.png)
-
 ## Deployed Link and Repo Link
 Deployed Weblink: https://ronin1702.github.io/Work-Day-Scheduler/<br>
 Repo Link: https://github.com/Ronin1702/Work-Day-Scheduler/ <br>
+
+## Screenshot 
+![screenshot](./Assets/Images/Work-Day-Scheduler-Screenshot.png)
